@@ -1,10 +1,8 @@
 library vietnamese;
 
 extension StringNullableExtension on String? {
-  bool get isNullOrEmpty => this == null || this!.isEmpty;
-
   String get deleteVietnameseAccents {
-    if (isNullOrEmpty) {
+    if (this == null || this!.isEmpty) {
       return '';
     }
     String str = this!;
